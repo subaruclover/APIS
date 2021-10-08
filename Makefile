@@ -1,13 +1,13 @@
 
 GIT_BASE_URL=https://github.com/SonyCSL
-
+GIT_BASE_URL_FORK=https://github.com/subaruclover
 
 apis-bom:
 	git clone $(GIT_BASE_URL)/apis-bom.git
 apis-common:
 	git clone $(GIT_BASE_URL)/apis-common.git
 apis-main:
-	git clone $(GIT_BASE_URL)/apis-main.git
+	git clone $(GIT_BASE_URL_FORK)/apis-main.git
 apis-ccc:
 	git clone $(GIT_BASE_URL)/apis-ccc.git
 apis-log:
@@ -15,9 +15,9 @@ apis-log:
 apis-web:
 	git clone $(GIT_BASE_URL)/apis-web.git
 apis-emulator:
-	git clone $(GIT_BASE_URL)/apis-emulator.git
+	git clone $(GIT_BASE_URL_FORK)/apis-emulator.git
 apis-main_controller:
-	git clone $(GIT_BASE_URL)/apis-main_controller.git
+	git clone $(GIT_BASE_URL_FORK)/apis-main_controller.git
 apis-service_center:
 	git clone $(GIT_BASE_URL)/apis-service_center.git
 apis-tester:
