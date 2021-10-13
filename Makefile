@@ -100,11 +100,11 @@ run-apis-main-1:
 	@sh runner.sh apis-main/exe/ 'sh start.sh'
 run-apis-main-2:
 	@sh runner.sh apis-main/exe/ 'sh start2.sh'
-#run-apis-main-3:
-#	@sh runner.sh apis-main/exe/ 'sh start3.sh'
-#run-apis-main-4:
-#	@sh runner.sh apis-main/exe/ 'sh start4.sh'
-run-apis-main: run-apis-main-1 run-apis-main-2 #run-apis-main-3 run-apis-main-4
+run-apis-main-3:
+	@sh runner.sh apis-main/exe/ 'sh start3.sh'
+run-apis-main-4:
+	@sh runner.sh apis-main/exe/ 'sh start4.sh'
+run-apis-main: run-apis-main-1 run-apis-main-2 run-apis-main-3 run-apis-main-4
 run-apis-ccc:
 	@sh runner.sh apis-ccc/exe/ 'sh start.sh'
 run-apis-log:
@@ -112,7 +112,7 @@ run-apis-log:
 run-apis-web:
 	@sh runner.sh apis-web/exe/ 'sh start.sh'
 run-apis-emulator:
-	@sh runner.sh apis-emulator/ '. venv/bin/activate && ./startEmul.py 2'
+	@sh runner.sh apis-emulator/ '. venv/bin/activate && ./startEmul.py 4'
 run-apis-main_controller:
 	@sh runner.sh apis-main_controller/ '. venv/bin/activate && ./startMain.py'
 run-apis-service_center:
