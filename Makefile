@@ -22,6 +22,8 @@ apis-service_center:
 	git clone $(GIT_BASE_URL)/apis-service_center.git
 apis-tester:
 	git clone $(GIT_BASE_URL)/apis-tester.git
+apis-rl:
+	git clone $(GIT_BASE_URL_FORK)/apis-rl.git
 
 
 build-apis-bom: apis-bom
