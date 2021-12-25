@@ -123,6 +123,8 @@ run-apis-tester:
 	@sh runner.sh apis-tester/ '. venv/bin/activate && ./startTester.py'
 run-mongodb:
 	@sh runner.sh mongodb/ 'sh start.sh'
+# TODO add run-apis-rl scripts for each house
+
 
 run: run-mongodb run-apis-service_center run-apis-emulator run-apis-main run-apis-ccc run-apis-log run-apis-web run-apis-main_controller run-apis-tester
 
