@@ -124,9 +124,18 @@ run-apis-tester:
 run-mongodb:
 	@sh runner.sh mongodb/ 'sh start.sh'
 # TODO add run-apis-rl scripts for each house
+run-apis-rl-1:
+	@sh runner.sh apis- '. venv/bin/activate && ./main.py'
+run-apis-rl-2:
+	@sh runner.sh apis- '. venv/bin/activate && ./main2.py'
+run-apis-rl-3:
+	@sh runner.sh apis- '. venv/bin/activate && ./main3.py'
+run-apis-rl-4:
+	@sh runner.sh apis- '. venv/bin/activate && ./main4.py'
+run-apis-rl: run-apis-rl-1 run-apis-rl-2 run-apis-rl-3 run-apis-rl-4
 
 
-run: run-mongodb run-apis-service_center run-apis-emulator run-apis-main run-apis-ccc run-apis-log run-apis-web run-apis-main_controller run-apis-tester
+run: run-mongodb run-apis-service_center run-apis-emulator run-apis-main run-apis-ccc run-apis-log run-apis-web run-apis-main_controller run-apis-tester run-apis-rl
 
 
 stop-apis-main:
@@ -147,5 +156,8 @@ stop-apis-tester:
 	cd apis-tester/ && sh stop.sh
 stop-mongodb:
 	cd mongodb/ && sh stop.sh
+# TODO stop-apis-rl add stop.sh file
+stop-apis-rl:
+	cd apis-rl/ && sh stop.sh
 
-stop: stop-apis-tester stop-apis-main_controller stop-apis-main stop-apis-ccc stop-apis-log stop-apis-web stop-apis-emulator stop-apis-service_center stop-mongodb
+stop: stop-apis-tester stop-apis-main_controller stop-apis-main stop-apis-ccc stop-apis-log stop-apis-web stop-apis-emulator stop-apis-service_center stop-mongodb stop-apis-rl
