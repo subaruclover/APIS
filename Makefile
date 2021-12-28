@@ -128,14 +128,14 @@ run-mongodb:
 	@sh runner.sh mongodb/ 'sh start.sh'
 # TODO add run-apis-rl scripts for each house
 run-apis-rl-1:
-	@sh runner.sh apis- '. venv/bin/activate && ./main.py'
+	@sh runner.sh apis-rl/ '. venv/bin/activate && ./main.py'
 run-apis-rl-2:
-	@sh runner.sh apis- '. venv/bin/activate && ./main2.py'
+	@sh runner.sh apis-rl/ '. venv/bin/activate && ./main2.py'
 run-apis-rl-3:
-	@sh runner.sh apis- '. venv/bin/activate && ./main3.py'
+	@sh runner.sh apis-rl/ '. venv/bin/activate && ./main3.py'
 run-apis-rl-4:
-	@sh runner.sh apis- '. venv/bin/activate && ./main4.py'
-run-apis-rl: run-apis-rl-1 run-apis-rl-2 run-apis-rl-3 run-apis-rl-4
+	@sh runner.sh apis-rl/ '. venv/bin/activate && ./main4.py'
+run-apis-rl: run-apis-rl-1 # run-apis-rl-2 run-apis-rl-3 run-apis-rl-4
 
 
 run: run-mongodb run-apis-service_center run-apis-emulator run-apis-main run-apis-ccc run-apis-log run-apis-web run-apis-main_controller run-apis-tester run-apis-rl
