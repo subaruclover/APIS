@@ -46,8 +46,11 @@ build-apis-service_center: apis-service_center
 	cd apis-service_center/ && sh venv.sh && sh initdb.sh
 build-apis-tester: apis-tester
 	cd apis-tester/ && sh venv.sh
+# TODO build apis-rl virtual environment
+build-apis-rl: apis-rl
+	cd apis-rl/ && sh venv.sh
 
-build: build-apis-bom build-apis-common build-apis-main build-apis-ccc build-apis-log build-apis-web build-apis-emulator build-apis-main_controller build-apis-service_center build-apis-tester
+build: build-apis-bom build-apis-common build-apis-main build-apis-ccc build-apis-log build-apis-web build-apis-emulator build-apis-main_controller build-apis-service_center build-apis-tester build-apis-rl
 
 
 update-apis-bom: apis-bom
