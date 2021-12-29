@@ -49,8 +49,12 @@ build-apis-tester: apis-tester
 # TODO build apis-rl virtual environment
 build-apis-rl: apis-rl
 	cd apis-rl/ && sh venv.sh
+build-apis-fixed: apis-fixed
+	cd apis-fixed/ && sh venv.sh
 
-build: build-apis-bom build-apis-common build-apis-main build-apis-ccc build-apis-log build-apis-web build-apis-emulator build-apis-main_controller build-apis-service_center build-apis-tester build-apis-rl
+build: build-apis-bom build-apis-common build-apis-main build-apis-ccc build-apis-log\
+       build-apis-web build-apis-emulator build-apis-main_controller build-apis-service_center\
+       build-apis-tester build-apis-rl build-apis-fixed
 
 
 update-apis-bom: apis-bom
@@ -73,8 +77,14 @@ update-apis-service_center: apis-service_center
 	cd apis-service_center/ && git pull
 update-apis-tester: apis-tester
 	cd apis-tester/ && git pull
+update-apis-rl: apis-rl
+	cd apis-rl/ && git pull
+update-apis-fixed: apis-fixed
+	cd apis-fixed/ && git pull
 
-update: update-apis-bom update-apis-common update-apis-main update-apis-ccc update-apis-log update-apis-web update-apis-emulator update-apis-main_controller update-apis-service_center update-apis-tester
+update: update-apis-bom update-apis-common update-apis-main update-apis-ccc \
+ 		update-apis-log update-apis-web update-apis-emulator update-apis-main_controller \
+ 		update-apis-service_center update-apis-tester update-apis-rl update-apis-fixed
 
 
 clean-apis-bom:
@@ -97,8 +107,16 @@ clean-apis-service_center:
 	cd apis-service_center/ && rm -rf venv
 clean-apis-tester:
 	cd apis-tester/ && rm -rf venv
+clean-apis-rl:
+	cd apis-rl/ && rm -rf venv
+clean-apis-fixed:
+	cd apis-fixed/ && rm -rf venv
 
-clean: clean-apis-bom clean-apis-common clean-apis-main clean-apis-ccc clean-apis-log clean-apis-web clean-apis-common clean-apis-bom clean-apis-emulator clean-apis-main_controller clean-apis-service_center clean-apis-tester
+
+clean: clean-apis-bom clean-apis-common clean-apis-main clean-apis-ccc \
+       clean-apis-log clean-apis-web clean-apis-common clean-apis-bom clean-apis-emulator \
+       clean-apis-main_controller clean-apis-service_center clean-apis-tester \
+       clean-apis-rl clean-apis-fixed
 
 
 run-apis-main-1:
@@ -134,11 +152,18 @@ run-apis-rl-2:
 run-apis-rl-3:
 	@sh runner.sh apis-rl/ '. venv/bin/activate && ./main3.py'
 run-apis-rl-4:
-	@sh runner.sh apis-rl/ '. venv/bin/activate && ./main4.py'
+	@sh runner.sh apis-rl '. venv/bin/activate && ./main4.py'
 run-apis-rl: run-apis-rl-1 # run-apis-rl-2 run-apis-rl-3 run-apis-rl-4
 # TODO add run-apis-fixed
+run-apis-fixed:
+	@sh runner.sh apis-fixed/ '. venv/bin/activate && ./main_fixed.py'
 
-run: run-mongodb run-apis-service_center run-apis-emulator run-apis-main run-apis-ccc run-apis-log run-apis-web run-apis-main_controller run-apis-tester run-apis-rl
+
+run-rl: run-mongodb run-apis-service_center run-apis-emulator run-apis-main run-apis-ccc \
+	 run-apis-log run-apis-web run-apis-main_controller run-apis-tester run-apis-rl
+
+run-fixed: run-mongodb run-apis-service_center run-apis-emulator run-apis-main run-apis-ccc \
+	 run-apis-log run-apis-web run-apis-main_controller run-apis-tester run-apis-fixed
 
 
 stop-apis-main:
@@ -162,5 +187,11 @@ stop-mongodb:
 # TODO stop-apis-rl add stop.sh file
 stop-apis-rl:
 	cd apis-rl/ && sh stop.sh
+stop-apis-fixed:
+	cd apis-fixed/ && sh stop.sh
 
-stop: stop-apis-tester stop-apis-main_controller stop-apis-main stop-apis-ccc stop-apis-log stop-apis-web stop-apis-emulator stop-apis-service_center stop-mongodb stop-apis-rl
+stop-rl: stop-apis-tester stop-apis-main_controller stop-apis-main stop-apis-ccc \
+	  stop-apis-log stop-apis-web stop-apis-emulator stop-apis-service_center stop-mongodb stop-apis-rl
+
+stop-fixed: stop-apis-tester stop-apis-main_controller stop-apis-main stop-apis-ccc \
+	  stop-apis-log stop-apis-web stop-apis-emulator stop-apis-service_center stop-mongodb stop-apis-fixed

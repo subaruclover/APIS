@@ -48,7 +48,15 @@ The software that realizes the above technology and makes it possible to easily 
  - [apis-tester](https://github.com/SonyCSL/apis-tester)  (Added on December 24, 2020)  
   Software to test and evaluation of apis-main.  
   See apis-tester's [Documentation](https://github.com/SonyCSL/apis-tester/blob/main/doc/en/apis-tester_specification_EN.md) for more information. 
+ - [apis-rl](https://github.com/subaruclover/apis-rl)  (First commit on October 14, 2021)  
+   Software to run reinforcement learning of apis-main.  
+   See apis-rl's [Documentation](https://github.com/subaruclover/apis-rl/blob/main/doc/apis-rl_specification_en.md) for more information. 
+ - [apis-fixed](https://github.com/subaruclover/apis-fixed)  (First commit on December 20, 2021)  
+ Software to run a default scenario of apis-main. Aim to test different acceleration rate. 
+ See apis-fixed's [Documentation](https://github.com/subaruclover/apis-fixed/blob/main/doc/apis-fixed_specification_en.md#3-functions) for more information. 
   
+
+ 
  ## Installation  
  
   [Operating Environment]  
@@ -91,10 +99,16 @@ $ make build
 * If an error occurs with the "make build" or "make run" command, open the terminal again and run it.  
  
 ## Running  
-Run all of the above APIS related software at once.    
+Run a fixed scenario policy of the APIS related software at once.    
 
  ```bash
-$ make run
+$ make run-fixed
+```
+
+Run reinforcement learning APIS related software at once.    
+
+ ```bash
+$ make run-rl
 ```
 
  &emsp;After running each software, access the followings in your browser to display.   
