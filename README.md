@@ -91,7 +91,7 @@ $ sudo apt install mongodb-org
  See each software repository for the individual installation and execution of each software.    
  
  ```bash
-$ git clone https://github.com/SonyCSL/APIS.git
+$ git clone https://github.com/subaruclover/APIS.git
 $ cd APIS
 $ make build
 ```
