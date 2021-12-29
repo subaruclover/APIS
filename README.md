@@ -133,10 +133,14 @@ $ make run-rl
  
  
  ## Stopping
-Stop all of the above APIS related software at once.   
+Stop all the above APIS related software at once.   
 
  ```bash
-$ make stop
+$ make stop-fixed
+```
+
+ ```bash
+$ make stop-rl
 ```
   
 ### ▼ Software and hardware information required for energy exchange using actual DC/DC converters and batteries
