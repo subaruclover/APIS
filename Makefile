@@ -24,6 +24,8 @@ apis-tester:
 	git clone $(GIT_BASE_URL)/apis-tester.git
 apis-rl:
 	git clone $(GIT_BASE_URL_FORK)/apis-rl.git
+apis-fixed:
+	git clone $(GIT_BASE_URL_FORK)/apis-fixed.git
 
 
 build-apis-bom: apis-bom
