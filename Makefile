@@ -160,6 +160,8 @@ run-apis-rl: run-apis-rl-1 # run-apis-rl-2 run-apis-rl-3 run-apis-rl-4
 run-apis-fixed:
 	@sh runner.sh apis-fixed/ '. venv/bin/activate && ./main_fixed.py'
 
+run: run-mongodb run-apis-service_center run-apis-emulator run-apis-main run-apis-ccc \
+	 run-apis-log run-apis-web run-apis-main_controller run-apis-tester
 
 run-rl: run-mongodb run-apis-service_center run-apis-emulator run-apis-main run-apis-ccc \
 	 run-apis-log run-apis-web run-apis-main_controller run-apis-tester run-apis-rl
@@ -191,6 +193,9 @@ stop-apis-rl:
 	cd apis-rl/ && sh stop.sh
 stop-apis-fixed:
 	cd apis-fixed/ && sh stop.sh
+
+stop: stop-apis-tester stop-apis-main_controller stop-apis-main stop-apis-ccc \
+	  stop-apis-log stop-apis-web stop-apis-emulator stop-apis-service_center stop-mongodb
 
 stop-rl: stop-apis-tester stop-apis-main_controller stop-apis-main stop-apis-ccc \
 	  stop-apis-log stop-apis-web stop-apis-emulator stop-apis-service_center stop-mongodb stop-apis-rl

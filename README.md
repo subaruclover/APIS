@@ -99,6 +99,12 @@ $ make build
 * If an error occurs with the "make build" or "make run" command, open the terminal again and run it.  
  
 ## Running  
+Run the original APIS related software at once.    
+
+ ```bash
+$ make run
+```
+
 Run a fixed scenario policy of the APIS related software at once.    
 
  ```bash
@@ -134,6 +140,11 @@ $ make run-rl
  
  ## Stopping
 Stop all the above APIS related software at once.   
+
+```bash
+$ make stop
+```
+
 
  ```bash
 $ make stop-fixed
