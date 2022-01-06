@@ -153,6 +153,11 @@ $ make stop-fixed
  ```bash
 $ make stop-rl
 ```
+
+## Setting up in MacOS 
+Similar to Linux, but the preparation has slightly difference. It is 
+recommend to use homebrew to install the necessary virtual environments. 
+A detailed process could found at [Dropbox](https://paper.dropbox.com/doc/Installation-of-APIS-on-MacOS-yMl7Y7qofbLHPB98nL5uG).
   
 ### ▼ Software and hardware information required for energy exchange using actual DC/DC converters and batteries
 Use apis-dcdc_batt_comm instead of apis-emulator.  
