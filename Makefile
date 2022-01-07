@@ -188,9 +188,9 @@ stop-apis-tester:
 	cd apis-tester/ && sh stop.sh
 stop-mongodb:
 	cd mongodb/ && sh stop.sh
-# TODO stop-apis-rl add stop.sh file
+# TODO stop-apis-rl add stop.sh file, stop for all houses
 stop-apis-rl:
-	cd apis-rl/ && sh stop.sh
+	cd apis-rl/ && sh stop-kill.sh  # stop.sh
 stop-apis-fixed:
 	cd apis-fixed/ && sh stop.sh
 
