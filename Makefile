@@ -48,7 +48,7 @@ build-apis-service_center: apis-service_center
 	cd apis-service_center/ && sh venv.sh && sh initdb.sh
 build-apis-tester: apis-tester
 	cd apis-tester/ && sh venv.sh
-# TODO build apis-rl virtual environment
+# build apis-rl virtual environment
 build-apis-rl: apis-rl
 	cd apis-rl/ && sh venv.sh
 build-apis-fixed: apis-fixed
@@ -146,7 +146,7 @@ run-apis-tester:
 	@sh runner.sh apis-tester/ '. venv/bin/activate && ./startTester.py'
 run-mongodb:
 	@sh runner.sh mongodb/ 'sh start.sh'
-# TODO add run-apis-rl scripts for each house
+# add run-apis-rl scripts for each house
 run-apis-rl-1:
 	@sh runner.sh apis-rl/ '. venv/bin/activate && ./main.py'
 run-apis-rl-2:
@@ -156,7 +156,7 @@ run-apis-rl-3:
 run-apis-rl-4:
 	@sh runner.sh apis-rl/ '. venv/bin/activate && ./main4.py'
 run-apis-rl: run-apis-rl-1 run-apis-rl-2 run-apis-rl-3 run-apis-rl-4
-# TODO add run-apis-fixed
+# add run-apis-fixed
 run-apis-fixed:
 	@sh runner.sh apis-fixed/ '. venv/bin/activate && ./main_fixed.py'
 
@@ -188,7 +188,7 @@ stop-apis-tester:
 	cd apis-tester/ && sh stop.sh
 stop-mongodb:
 	cd mongodb/ && sh stop.sh
-# TODO stop-apis-rl add stop.sh file, stop for all houses
+# stop-apis-rl add stop.sh file, stop for all houses
 stop-apis-rl:
 	cd apis-rl/ && sh stop-kill.sh  # stop.sh
 stop-apis-fixed:
