@@ -131,7 +131,8 @@ $ make run-rl
  
  ![キャプチャ](https://user-images.githubusercontent.com/71874910/97250475-602a5b80-1849-11eb-95bd-b8c1cac57c61.PNG)
  
- &emsp;Simulate energy exchange with setting Global Mode to "Run".  
+ &emsp;Simulate energy exchange with setting Global Mode to "Run". 
+ (Note that manually set "Run" is needed, otherwise even the emulator is running, no energy sharing would start.)   
  
  ![キャプチャ](https://user-images.githubusercontent.com/71874910/96272423-0932b400-1009-11eb-9a90-f9e5bd49baef.PNG)
  

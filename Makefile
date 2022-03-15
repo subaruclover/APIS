@@ -155,8 +155,8 @@ run-apis-rl-3:
 	@sh runner.sh apis-rl/ '. venv/bin/activate && ./main3.py'
 run-apis-rl-4:
 	@sh runner.sh apis-rl/ '. venv/bin/activate && ./main4.py'
-run-apis-rl-speed:
-	@sh runner.sh apis-rl/ '. venv/bin/activate && ./speedmode.py'
+#run-apis-rl-speed:
+#	@sh runner.sh apis-rl/ '. venv/bin/activate && ./speedmode.py'
 run-apis-rl: run-apis-rl-1 run-apis-rl-2 run-apis-rl-3 run-apis-rl-4
 # add run-apis-fixed
 run-apis-fixed:
