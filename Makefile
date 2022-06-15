@@ -155,9 +155,19 @@ run-apis-rl-3:
 	@sh runner.sh apis-rl/ '. venv/bin/activate && ./main3.py'
 run-apis-rl-4:
 	@sh runner.sh apis-rl/ '. venv/bin/activate && ./main4.py'
+# apis-rl for testing:
+run-apis-rl-test-1:
+	@sh runner.sh apis-rl/ '. venv/bin/activate && ./main_testdata.py'
+run-apis-rl-test-2:
+	@sh runner.sh apis-rl/ '. venv/bin/activate && ./main_testdata2.py'
+run-apis-rl-test-3:
+	@sh runner.sh apis-rl/ '. venv/bin/activate && ./main_testdata3.py'
+run-apis-rl-test-4:
+	@sh runner.sh apis-rl/ '. venv/bin/activate && ./main_testdata4.py'
 #run-apis-rl-speed:
 #	@sh runner.sh apis-rl/ '. venv/bin/activate && ./speedmode.py'
 run-apis-rl: run-apis-rl-1 run-apis-rl-2 run-apis-rl-3 run-apis-rl-4
+run-apis-rl-test: run-apis-rl-test-1 run-apis-rl-test-2 run-apis-rl-test-3 run-apis-rl-test-4
 # add run-apis-fixed
 run-apis-fixed:
 	@sh runner.sh apis-fixed/ '. venv/bin/activate && ./main_fixed.py'
@@ -167,6 +177,9 @@ run: run-mongodb run-apis-service_center run-apis-emulator run-apis-main run-api
 
 run-rl: run-mongodb run-apis-service_center run-apis-emulator run-apis-main run-apis-ccc \
 	 run-apis-log run-apis-web run-apis-main_controller run-apis-tester run-apis-rl #run-apis-rl-speed
+
+run-rl-test: run-mongodb run-apis-service_center run-apis-emulator run-apis-main run-apis-ccc \
+	 run-apis-log run-apis-web run-apis-main_controller run-apis-tester run-apis-rl-test
 
 run-fixed: run-mongodb run-apis-service_center run-apis-emulator run-apis-main run-apis-ccc \
 	 run-apis-log run-apis-web run-apis-main_controller run-apis-tester run-apis-fixed
